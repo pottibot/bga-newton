@@ -1,0 +1,21 @@
+{
+    "name": "newton",
+    "version": "1.0.0",
+    "description": "",
+    "main": "newton.js",
+    "scripts": {
+        "build:ts": "tsc",
+        "build:scss": "sass --no-source-map newton.scss newton.css",
+        "watch:ts": "tsc --watch",
+        "watch:scss": "sass --watch newton.scss newton.css",
+        "watch": "npm-run-all --parallel watch:scss watch:ts",
+        "build": "npm run build:scss & npm run build:ts"
+    },
+    "author": "Pietro Luigi Porcedda",
+    "license": "MIT",
+    "devDependencies": {
+        "npm-run-all": "^4.1.5",
+        "sass": "^1.56.2",
+        "typescript": "^4.9.4"
+    }
+}

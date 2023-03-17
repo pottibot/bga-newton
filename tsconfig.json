@@ -1,0 +1,15 @@
+{
+    "rootDir": ".", 
+    "compilerOptions": {
+      "target": "es5",
+      "module": "none",
+      "lib": ["dom", "esnext"],  
+      "sourceMap": false,
+      "outFile": "newton.js",
+      "typeRoots": ["modules/js/types", "./types", "./node_modules/@types"]
+    },
+    "include": [
+        "modules/js/**/*.ts",
+        "newton.ts",
+    ]
+}

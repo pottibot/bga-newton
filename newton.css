@@ -1,0 +1,121 @@
+/* TOGGLE SWITCH BASED ON INPUT CHECKBOX - inspired by W3Schools tutorial */
+/* The switch - the box around the slider */
+.toggle_switch {
+  position: absolute;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+  margin-left: 5px;
+  /* Hide default HTML checkbox */
+  /* The slider */
+}
+.toggle_switch input {
+  visibility: hidden;
+}
+.toggle_switch .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 22px;
+  cursor: pointer;
+  background-color: #ccc;
+  transition: 400ms;
+}
+.toggle_switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  left: 2px;
+  bottom: 2px;
+  background-color: #ffffff;
+  transition: 400ms;
+}
+.toggle_switch input:checked + .slider {
+  background-color: #4871b6;
+}
+.toggle_switch input:checked + .slider:before {
+  transform: translateX(18px);
+}
+.toggle_switch input:focus + .slider {
+  box-shadow: 0 0 1px #4871b6;
+}
+
+#preferences_panel {
+  transition: height 250ms ease-in;
+}
+#preferences_panel #preferences_panel_icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#preferences_panel #preferences_panel_icon #cog_icon {
+  width: 35px;
+  height: 35px;
+  fill: rgb(90, 58, 42);
+}
+#preferences_panel #preferences_panel_icon #menu_arrow {
+  width: 0px;
+  height: 0px;
+  border: solid;
+  border-width: 7px 15px 7px 15px;
+  border-color: transparent transparent transparent rgb(90, 58, 42);
+  transform-origin: 20% 50%;
+  transition: transform 250ms ease-in;
+  transform: rotate(0deg);
+  cursor: pointer;
+}
+#preferences_panel #preferences_panel_icon #menu_arrow:hover {
+  border-color: transparent transparent transparent rgb(174, 116, 87);
+}
+#preferences_panel #preferences_panel_icon #menu_arrow.open {
+  transform: rotate(90deg);
+}
+#preferences_panel #preferences_panel_options {
+  height: 0px;
+  overflow: hidden;
+  transition: height 250ms ease-in;
+}
+#preferences_panel #preferences_panel_options .preference_option {
+  padding: 10px;
+  border-bottom: solid 1px rgb(90, 58, 42);
+}
+#preferences_panel #preferences_panel_options .preference_option .preference_lable {
+  display: inline-block;
+}
+#preferences_panel #preferences_panel_options .preference_option:first-child {
+  margin-top: 5px;
+  border-top: solid 1px rgb(90, 58, 42);
+}
+
+.testobj {
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  border: solid black 2px;
+}
+
+.testcont {
+  padding: 10px;
+  position: absolute;
+  border: solid black 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#b {
+  background-color: blueviolet;
+  transform: scale(0.5);
+}
+
+#c {
+  background-color: greenyellow;
+  left: 150px;
+  top: 150px;
+}
+
+/*# sourceMappingURL=newton.css.map */
